@@ -6,7 +6,6 @@ window.ApiUtil = {
       datatype: 'json',
       type: 'GET',
       success: function (data) {
-        debugger
         ApiActions.receiveAllPokemons(data);
       }
     });
