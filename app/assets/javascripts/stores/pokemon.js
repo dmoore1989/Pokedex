@@ -10,7 +10,6 @@
     },
 
     resetPokemons: function(pokemons){
-      debugger
       _pokemons = pokemons;
     },
 
