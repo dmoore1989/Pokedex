@@ -27,7 +27,7 @@ window.PokemonsIndex = React.createClass({
 
   render: function () {
     return (
-      <div>
+      <div className="pokemon-index">
         <ul>{this.renderPokemonIndexItems()}</ul>
       </div>
     );

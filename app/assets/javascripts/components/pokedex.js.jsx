@@ -1,6 +1,16 @@
 $(function(){
+
+  var Router = ReactRouter.Router;
+  var Route = ReactRouter.Route;
+
   React.render(
-    <PokemonsIndex/>,
+
+    <Router>
+      <Route path="/" component={Index} />
+
+    </Router>
+    ,
     document.getElementById("pokedex")
   );
+
 });
