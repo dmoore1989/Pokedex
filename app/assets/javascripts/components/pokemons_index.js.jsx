@@ -19,9 +19,13 @@ window.PokemonsIndex = React.createClass({
     this.setState({pokemons: PokemonStore.all()});
   },
 
+
+
   renderPokemonIndexItems: function () {
     return this.state.pokemons.map(function(pokemon, idx){
-      return <li><PokemonIndexItem pokemon={pokemon} key={idx} /></li>
+      return (
+        <PokemonIndexItem pokemon={pokemon} key={idx}/>
+      )
     });
   },
 
