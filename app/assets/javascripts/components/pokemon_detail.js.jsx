@@ -22,7 +22,7 @@ window.PokemonDetail = React.createClass({
   },
 
   mapMoves: function () {
-    return this.state.pokemon.moves.map(function(move){
+    return this.state.pokemon.moves.map(function (move) {
       return (<li>{move}</li>);
     });
   },
@@ -32,23 +32,22 @@ window.PokemonDetail = React.createClass({
   },
 
   render: function () {
-    if (this.state.pokemon){
-      return(
+    if (this.state.pokemon) {
+      return (
         <div>
           <div className="detail">
             <div><img src={this.state.pokemon.image_url} /></div>
-            <div>{this.state.pokemon.name}</div>
-            <div>{this.state.pokemon.attack}</div>
-            <div>{this.state.pokemon.defense}</div>
-            <div>{this.state.pokemon.poke_type}</div>
-            <ul>{this.mapMoves}</ul>
+            <div>Name: {this.state.pokemon.name}</div>
+            <div>Attack: {this.state.pokemon.attack}</div>
+            <div>Defense: {this.state.pokemon.defense}</div>
+            <div>Type: {this.state.pokemon.poke_type}</div>
+            <ul>Moves: {this.mapMoves()}</ul>
           </div>
+          <div><ToyIndex toys={this.state.pokemon.toys} /></div>
         </div>
-
-      )
+      );
     } else {
-      return <div></div>
+      return (<div> </div>);
     }
   }
-
 });
