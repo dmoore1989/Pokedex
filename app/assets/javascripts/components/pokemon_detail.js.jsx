@@ -4,6 +4,7 @@ window.PokemonDetail = React.createClass({
   },
 
   getStateFromStore: function () {
+    ApiUtil.fetchPokemon(this.props.params.pokemonId);
     pokemon = PokemonStore.find(parseInt(this.props.params.pokemonId));
     return pokemon;
   },
@@ -50,4 +51,5 @@ window.PokemonDetail = React.createClass({
       return (<div> </div>);
     }
   }
+
 });

@@ -8,7 +8,7 @@ $(function () {
     <Router>
       <Route path="/" component={Index}>
         <Route path="pokemon/:pokemonId" component={PokemonDetail} />
-        <Route path="pokemon/:pokemonId/toys/:toyId" components={{detail:{PokemonDetail}, toy:{ToyDetail}}/>
+        <Route path="pokemon/:pokemonId/toys/:toyId" components={{detail:PokemonDetail, toy:ToyDetail}}/>
       </Route>
     </Router>
     ,

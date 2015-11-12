@@ -3,7 +3,7 @@ window.ToyIndexItem = React.createClass({
   mixins: [ReactRouter.History],
 
   showToy: function () {
-    var toyLink ="/pokemon/" + this.props.toy.pokemonId;
+    var toyLink ="/pokemon/" + this.props.toy.pokemon_id;
     toyLink += "/toys/" + this.props.toy.id;
     this.history.pushState(null, toyLink);
   },

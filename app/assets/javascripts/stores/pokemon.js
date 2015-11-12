@@ -23,11 +23,11 @@
     },
 
     find: function (id) {
-      _pokemons.forEach(function(el){
-        if ( el.id === id){
-          return el;
+      for (var i = 0; i < _pokemons.length; i++){
+        if ( _pokemons[i].id == id){
+          return _pokemons[i];
         }
-      });
+      }
     },
 
     DispatchId: AppDispatcher.register(function (payload) {
